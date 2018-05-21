@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AndroidFrame2.iml" filepath="$PROJECT_DIR$/AndroidFrame2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/flebox/flebox.iml" filepath="$PROJECT_DIR$/flebox/flebox.iml" />
+      <module fileurl="file://$PROJECT_DIR$/materialdrawer/materialdrawer.iml" filepath="$PROJECT_DIR$/materialdrawer/materialdrawer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/recyclerview/recyclerview.iml" filepath="$PROJECT_DIR$/recyclerview/recyclerview.iml" />
+    </modules>
+  </component>
+</project>

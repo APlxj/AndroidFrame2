@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">MaterialDrawer</string>
+    <string name="home">主页</string>
+    <string name="settings">设置</string>
+    <string name="ar">WIFI</string>
+    <string name="msg">消息</string>
+    <string name="rp">红包</string>
+    <string name="exit">退出</string>
+    <string name="more">更多</string>
+    <string name="read">阅读</string>
+    <string name="gift">礼物</string>
+    <string name="didi">滴滴打车</string>
+    <string name="history">历史记录</string>
+    <string name="cp">收藏</string>
+    <string name="dzdp">大众点评</string>
+</resources>

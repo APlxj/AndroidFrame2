@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/divider_shape"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="25dp"
+                android:background="#a00"
+                android:visibility="gone" />
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="热门专题"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="换一批"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <com.google.android.flexbox.FlexboxLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/flexbox_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:alignContent="flex_end"
+            app:alignItems="center"
+            app:flexDirection="row_reverse"
+            app:flexWrap="wrap"
+            app:justifyContent="flex_end"
+            app:showDivider="beginning|middle">
+
+            <TextView
+                style="@style/tv_flebox"
+                android:text="程序员"
+                app:layout_alignSelf="flex_start"
+                app:layout_flexGrow="1" />
+
+            <TextView
+                style="@style/tv_flebox"
+                android:text="影视天堂"
+                app:layout_alignSelf="flex_start"
+                app:layout_flexGrow="1" />
+
+            <TextView
+                style="@style/tv_flebox"
+                android:text="美食"
+                app:layout_alignSelf="flex_start"
+                app:layout_flexGrow="1" />
+
+            <TextView
+                style="@style/tv_flebox"
+                android:text="漫画.手绘"
+                app:layout_alignSelf="flex_start"
+                app:layout_flexGrow="1" />
+
+            <TextView
+                style="@style/tv_flebox"
+                android:text="广告圈"
+                app:layout_alignSelf="flex_start"
+                app:layout_flexGrow="1" />
+
+            <TextView
+                style="@style/tv_flebox"
+                android:text="旅行.在路上"
+                app:layout_alignSelf="flex_start"
+                app:layout_flexGrow="1" />
+
+            <TextView
+                style="@style/tv_flebox"
+                android:text="娱乐八卦"
+                app:layout_alignSelf="flex_start"
+                app:layout_flexGrow="1" />
+
+            <TextView
+                style="@style/tv_flebox"
+                android:text="青春"
+                app:layout_alignSelf="flex_start"
+                app:layout_flexGrow="1" />
+
+            <TextView
+                style="@style/tv_flebox"
+                android:text="谈写作"
+                app:layout_alignSelf="flex_start"
+                app:layout_flexGrow="1" />
+
+            <TextView
+                style="@style/tv_flebox"
+                android:text="短篇小说"
+                app:layout_alignSelf="flex_start"
+                app:layout_flexGrow="1" />
+
+            <TextView
+                style="@style/tv_flebox"
+                android:text="散文"
+                app:layout_alignSelf="flex_start"
+                app:layout_flexGrow="1" />7
+
+            <TextView
+                style="@style/tv_flebox"
+                android:text="摄影"
+                app:layout_alignSelf="flex_start"
+                app:layout_flexGrow="1" />
+        </com.google.android.flexbox.FlexboxLayout>
+    </LinearLayout>
+</LinearLayout>
