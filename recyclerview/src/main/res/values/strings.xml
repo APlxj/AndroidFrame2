@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">"RecyclerView "</string>
+    <string name="add">添加</string>
+    <string name="delete">删除</string>
     <string-array name="test">
         <item>我只是部落遗子，你确是高贵公主，我愿把我生命的力量化为三刀为你而战，只为证明我，配的上你\n——蛮族之王</item>
         <item>猩红收割者 弗拉基米尔 (吸血鬼)</item>

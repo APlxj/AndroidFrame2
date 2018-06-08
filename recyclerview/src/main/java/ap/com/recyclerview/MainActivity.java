@@ -3,9 +3,11 @@ package ap.com.recyclerview;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.DividerItemDecoration;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
+import android.support.v7.widget.helper.ItemTouchHelper;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -58,6 +60,11 @@ public class MainActivity extends AppCompatActivity implements MyAdapter.OnRecyc
         lac.setDelay(0.2f);
         //为ListView设置LayoutAnimationController属性；
         //mRecyclerView.setLayoutAnimation(lac);
+        //拖动排序
+        ItemTouchCallBack touchCallBack = new ItemTouchCallBack();
+        touchCallBack.setOnItemTouchListener(myAdapter);
+        ItemTouchHelper itemTouchHelper = new ItemTouchHelper(touchCallBack);
+        itemTouchHelper.attachToRecyclerView(mRecyclerView);
     }
 
     private List<String> getData() {

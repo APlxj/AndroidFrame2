@@ -1,16 +1,16 @@
 package ap.com.recyclerview;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.helper.ItemTouchHelper;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
-
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -20,7 +20,8 @@ import java.util.List;
  * Email: swallow.li@kemai.cn
  * 修改备注：
  */
-public class MyAdapter extends BaseAdapter<String, MyAdapter.ViewHolder> implements View.OnClickListener, View.OnLongClickListener {
+public class MyAdapter extends BaseAdapter<String, MyAdapter.ViewHolder>
+        implements View.OnClickListener, View.OnLongClickListener, ItemTouchCallBack.OnItemTouchListener {
 
     private OnRecyclerViewItemClickListener mOnItemClickListener = null;
     private String[] colors = {"#DF554A", "#FFA854", "#69CD74", "#71B4ED",
@@ -72,6 +73,28 @@ public class MyAdapter extends BaseAdapter<String, MyAdapter.ViewHolder> impleme
             mOnItemClickListener.onItemLongClick(v, (String) v.getTag());
         }
         return true;
+    }
+
+    @Override
+    public void onMove(int fromPosition, int toPosition) {
+        if (fromPosition < toPosition) {
+            for (int i = fromPosition; i < toPosition; i++) {
+                Collections.swap(mData, i, i + 1);
+            }
+        } else {
+            for (int i = fromPosition; i > toPosition; i--) {
+                Collections.swap(mData, i, i - 1);
+            }
+        }
+        notifyItemMoved(fromPosition, toPosition);
+    }
+
+    @Override
+    public void onSwiped(int i, int position) {
+        if (position == ItemTouchHelper.LEFT) return;
+        Log.i("drag", "onSwiped");
+        mData.remove(position);
+        notifyItemRemoved(position);
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

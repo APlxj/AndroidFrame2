@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ap.handler">
+
+    <application
+        android:name=".BaseApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".binder.FirstActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <service
+            android:name=".binder.AddService"
+            android:exported="true"
+            android:process="@string/remote">
+            <intent-filter>
+                <action android:name="com.ap.handler.binder.AddService" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".binder.SecondActivity"
+            android:process="@string/remote" />
+        <activity
+            android:name=".handler.TwoActivity"
+            android:process="@string/remote" />
+        <activity
+            android:name=".handler.ThrActivity"
+            android:process="@string/thrremote" />
+    </application>
+
+</manifest>
