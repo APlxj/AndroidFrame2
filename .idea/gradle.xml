@@ -9,6 +9,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/androidtouchevent" />
+            <option value="$PROJECT_DIR$/customview" />
             <option value="$PROJECT_DIR$/flebox" />
             <option value="$PROJECT_DIR$/handler" />
             <option value="$PROJECT_DIR$/ipc" />
