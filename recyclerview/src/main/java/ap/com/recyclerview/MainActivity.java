@@ -1,13 +1,13 @@
 package ap.com.recyclerview;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.helper.ItemTouchHelper;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -36,19 +36,22 @@ public class MainActivity extends AppCompatActivity implements MyAdapter.OnRecyc
         //横向布局<mLayoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);>
         //List布局<LinearLayoutManager>
         //mLayoutManager = new StaggeredGridLayoutManager(4, StaggeredGridLayoutManager.VERTICAL);
-        mLayoutManager = new LinearLayoutManager(this);
+        //mLayoutManager = new LinearLayoutManager(this);
+        mLayoutManager = new GridLayoutManager(this, 8);
         mRecyclerView.setLayoutManager(mLayoutManager);
-        //添加间隔
+        //添加分割线
         DividerItemDecoration decoration = new DividerItemDecoration(this, DividerItemDecoration.VERTICAL);
         decoration.setDrawable(getResources().getDrawable(R.drawable.line));
         mRecyclerView.addItemDecoration(decoration);
-        //mRecyclerView.addItemDecoration(new MyDividerItemDecoration(this, LinearLayoutManager.VERTICAL));
+        //mRecyclerView.addItemDecoration(new MyDividerItemDecoration(this, LinearLayoutManager.HORIZONTAL));
         //mRecyclerView.setItemAnimator(newDefaultItemAnimator());
         //如果可以确定每个item的高度是固定的，设置这个选项可以提高性能
         //mRecyclerView.setHasFixedSize(true);
         //创建并设置Adapter
         myAdapter = new MyAdapter(getData(), this);
         myAdapter.setOnItemClickListener(this);
+        View view = LayoutInflater.from(this).inflate(R.layout.header, null);
+        myAdapter.addHeaderView(view);
         mRecyclerView.setAdapter(myAdapter);
         //动画
         Animation animation = AnimationUtils.loadAnimation(this, R.anim.in);
