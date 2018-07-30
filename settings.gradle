@@ -1,1 +1,1 @@
-include ':flebox', ':recyclerview', ':materialdrawer', ':androidtouchevent', ':handler', ':ipc', ':customview'
+include ':flebox', ':recyclerview', ':materialdrawer', ':androidtouchevent', ':handler', ':ipc', ':customview', ':arouter'

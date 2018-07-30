@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AndroidFrame2.iml" filepath="$PROJECT_DIR$/AndroidFrame2.iml" />
       <module fileurl="file://$PROJECT_DIR$/androidtouchevent/androidtouchevent.iml" filepath="$PROJECT_DIR$/androidtouchevent/androidtouchevent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/arouter/aouter.iml" filepath="$PROJECT_DIR$/arouter/aouter.iml" />
       <module fileurl="file://$PROJECT_DIR$/customview/customview.iml" filepath="$PROJECT_DIR$/customview/customview.iml" />
       <module fileurl="file://$PROJECT_DIR$/flebox/flebox.iml" filepath="$PROJECT_DIR$/flebox/flebox.iml" />
       <module fileurl="file://$PROJECT_DIR$/handler/handler.iml" filepath="$PROJECT_DIR$/handler/handler.iml" />
